@@ -11,12 +11,26 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/89994faf41.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header></header>
 
     <nav class="nav">
-      <img src="./images/logo-wo-bg.png" />
+      <div class="responsive-nav">
+        <img src="./images/logo-wo-bg.png" />
+        <!-- Hamburger icon -->
+        <div class="hamburger-icon">
+          <input type="checkbox" id="dropdown" />
+          <label for="dropdown">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+        </div>
+      </div>
       <div class="link-wrapper">
         <a href="#" class="nav__links">About</a>
         <a href="#" class="nav__links">Skills</a>

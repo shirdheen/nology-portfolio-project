@@ -10,6 +10,16 @@
     width: 80px;
     height: 80px;
   }
+  //   Hiding the hamburger icon for the desktop view
+  .hamburger-icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+  }
+  //   Hiding the checkbox default styling
+  .hamburger-icon input[type="checkbox"] {
+    appearance: none;
+  }
   &__links {
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
@@ -17,5 +27,47 @@
     font-weight: bold;
     font-size: large;
     padding: 10px;
+  }
+}
+
+// Targeting the element for the viewport less than 600px
+@media screen and (max-width: 600px) {
+  // Hiding the nav links with height and overflow
+  .link-wrapper {
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5 ease-in-out;
+  }
+  //   Puts the logo image at the left end and hamburger at the right end of the header
+  .nav {
+    .responsive-nav {
+      display: flex;
+      justify-content: space-between;
+      width: 400px;
+      //   Makes the hamburger icon visible
+      .hamburger-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-size: 2em;
+        padding: 0px;
+        .fa-xmark {
+          display: none;
+        }
+      }
+    }
+    &:has(.hamburger-icon input[type="checkbox"]:checked) .link-wrapper {
+      margin-top: 1rem;
+      height: auto;
+    }
+    &:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+      display: none;
+    }
+    &:has(.hamburger-icon input[type="checkbox"]:checked) .fa-xmark {
+      display: inline-block;
+    }
   }
 }
