@@ -70,3 +70,23 @@
     }
   }
 }
+
+.header {
+  text-align: right;
+  padding: 20px;
+  &__name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 5em;
+    color: #333333;
+    .fa-code {
+      padding: 30px;
+      color: #18bc9c;
+    }
+  }
+  &__description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    color: #e74c3c;
+  }
+}
