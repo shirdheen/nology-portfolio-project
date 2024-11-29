@@ -1,2 +1,3 @@
-# nology-portfolio-project
-Nology Project - Tech Portfolio
+# Project: Tech Portfolio
+
+Description here
