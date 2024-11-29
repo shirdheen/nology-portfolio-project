@@ -229,4 +229,36 @@
   padding: 10px;
 }
 
+.contact {
+  padding: 20px;
+}
+.contact__heading--large {
+  font-family: "Montserrat", sans-serif;
+  color: #2c3e50;
+  font-size: 4em;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.contact__heading--small {
+  font-family: "Montserrat", sans-serif;
+  color: #2c3e50;
+  font-size: 2em;
+  margin: 0;
+}
+.contact__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contact__icons--teal {
+  color: #18bc9c;
+  padding: 10px;
+}
+.contact__icons--red {
+  color: #e74c3c;
+  padding: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
