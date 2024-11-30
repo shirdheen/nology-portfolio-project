@@ -1,32 +1,57 @@
 .nav {
   background-color: #2c3e50;
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding: 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   img {
-    width: 80px;
-    height: 80px;
+    width: 50px;
+    height: 50px;
   }
   //   Hiding the hamburger icon for the desktop view
   .hamburger-icon {
     display: none;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+    //   Hiding the checkbox default styling
+    input[type="checkbox"] {
+      appearance: none;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: #ffffff;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .fa-mark {
+      display: none;
+    }
   }
-  //   Hiding the checkbox default styling
-  .hamburger-icon input[type="checkbox"] {
-    appearance: none;
+  .link-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
   }
   &__links {
     color: #ffffff;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
     font-weight: bold;
-    font-size: large;
-    padding: 10px;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    &:hover {
+      color: #18bc9c;
+    }
   }
 }
 
@@ -34,39 +59,45 @@
 @media screen and (max-width: 600px) {
   // Hiding the nav links with height and overflow
   .link-wrapper {
-    height: 0;
-    overflow: hidden;
     flex-direction: column;
     align-items: center;
-    transition: 0.5 ease-in-out;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    background-color: #2c3e50;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
   }
   //   Puts the logo image at the left end and hamburger at the right end of the header
   .nav {
-    .responsive-nav {
+    &__links {
+      padding: 10px;
+    }
+    //   Makes the hamburger icon visible
+    .hamburger-icon {
       display: flex;
-      justify-content: space-between;
-      //   Makes the hamburger icon visible
-      .hamburger-icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        font-size: 2em;
-        padding: 0px;
-        .fa-xmark {
-          display: none;
-        }
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: #ffffff;
+      font-size: 2em;
+      padding: 0px;
+      .fa-xmark {
+        display: none;
       }
     }
     &:has(.hamburger-icon input[type="checkbox"]:checked) .link-wrapper {
       margin-top: 1rem;
       height: auto;
     }
-    &:has(.hamburger-icon input[type="checkbox"]:checked) .fa-bars {
+    &:has(.hamburger-icon input[type="checkbox"]:checked) label .fa-bars {
       display: none;
     }
-    &:has(.hamburger-icon input[type="checkbox"]:checked) .fa-xmark {
-      display: inline-block;
+    &:has(.hamburger-icon input[type="checkbox"]:checked) label .fa-xmark {
+      display: inline;
     }
   }
 }
