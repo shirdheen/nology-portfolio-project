@@ -111,4 +111,31 @@
   color: #e74c3c;
 }
 
+.skills {
+  background-color: #2c3e50;
+  padding: 20px;
+}
+.skills__heading {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-size: 4em;
+  font-weight: 300;
+  margin: 0;
+  margin-bottom: 20px;
+}
+.skills__techstack {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.skills__icons--teal {
+  color: #18bc9c;
+  font-size: 9em;
+}
+.skills__icons--red {
+  color: #e74c3c;
+  font-size: 9em;
+}
+
 /*# sourceMappingURL=style.css.map */
