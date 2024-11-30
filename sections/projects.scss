@@ -1,0 +1,63 @@
+@use "../partials/mixins";
+@use "../partials/colors";
+
+.projects {
+  &__heading {
+    &--large {
+      @include mixins.font(colors.$snap-shot, 300, 0);
+      font-size: 4em;
+      padding: 20px;
+    }
+    &--small {
+      @include mixins.font(colors.$snap-shot, bold, 0);
+      font-size: 1.5em;
+    }
+  }
+  &__container {
+    background-color: colors.$snap-shot;
+    // height: 1000px;
+    @include mixins.flexbox(row, space-evenly);
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 50px;
+  }
+  &__card {
+    width: 300px;
+    height: 500px;
+    background-color: colors.$white;
+    @include mixins.flexbox(column, space-evenly);
+    align-items: center;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+  }
+  img {
+    width: 80%;
+    height: 60%;
+    object-fit: cover;
+    border: solid 1px colors.$carbon;
+    border-radius: 20px;
+  }
+  &__description {
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    color: colors.$carbon;
+  }
+  .icons-wrapper {
+    @include mixins.flexbox(row, space-evenly);
+  }
+  &__icons {
+    &--teal {
+      color: colors.$aloha;
+      text-decoration: none;
+      font-size: 2.5em;
+      padding: 10px;
+    }
+    &--red {
+      color: colors.$mandarin-red;
+      text-decoration: none;
+      font-size: 2.5em;
+      padding: 10px;
+    }
+  }
+}

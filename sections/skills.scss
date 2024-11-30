@@ -1,0 +1,26 @@
+@use "../partials/mixins";
+@use "../partials/colors";
+
+.skills {
+  background-color: colors.$snap-shot;
+  padding: 20px;
+  &__heading {
+    @include mixins.font(colors.$white, 300, 0);
+    font-size: 4em;
+    margin-bottom: 20px;
+  }
+  &__techstack {
+    @include mixins.flexbox(row, space-evenly);
+    flex-wrap: wrap;
+  }
+  &__icons {
+    &--teal {
+      color: colors.$aloha;
+      font-size: 9em;
+    }
+    &--red {
+      color: colors.$mandarin-red;
+      font-size: 9em;
+    }
+  }
+}

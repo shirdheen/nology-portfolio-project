@@ -1,0 +1,12 @@
+@mixin font($color, $font-weight, $margin) {
+  font-family: "Montserrat", sans-serif;
+  color: $color;
+  font-weight: $font-weight;
+  margin: $margin;
+}
+
+@mixin flexbox($flex-direction, $justify-content) {
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}

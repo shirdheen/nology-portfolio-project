@@ -1,0 +1,52 @@
+@use "../partials/colors";
+@use "../partials/mixins";
+
+.about {
+  &__heading {
+    &--large {
+      @include mixins.font(colors.$snap-shot, 300, 0);
+      font-size: 4em;
+      padding: 20px;
+    }
+    &--small {
+      @include mixins.font(colors.$snap-shot, bold, 0);
+      font-size: 1.5em;
+      margin: 0;
+    }
+  }
+  &__container {
+    background-color: colors.$snap-shot;
+    // height: 1000px;
+    @include mixins.flexbox(row, space-between);
+    padding: 50px;
+  }
+  &__image {
+    width: 50%;
+    border-radius: 100px;
+    margin-right: 50px;
+  }
+  &__card {
+    width: 100%;
+    background-color: colors.$white;
+    border-radius: 20px;
+    padding: 10px;
+  }
+  &__description {
+    @include mixins.font(colors.$carbon, 300, 5);
+    font-style: italic;
+  }
+  &__icons {
+    &--teal {
+      color: colors.$aloha;
+    }
+    &--red {
+      color: colors.$mandarin-red;
+    }
+  }
+}
+.about-wrapper {
+  @include mixins.flexbox(column, space-evenly);
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+}

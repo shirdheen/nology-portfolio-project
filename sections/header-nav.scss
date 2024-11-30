@@ -1,0 +1,124 @@
+@use "../partials/colors";
+
+.nav {
+  background-color: colors.$snap-shot;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  img {
+    width: 50px;
+    height: 50px;
+  }
+  //   Desktop view - hamburger icon hidden
+  .hamburger-icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+    //   Hiding the checkbox default styling
+    input[type="checkbox"] {
+      appearance: none;
+    }
+    label {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5em;
+      color: colors.$white;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+    .fa-mark {
+      display: none;
+    }
+  }
+  .link-wrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+  &__links {
+    color: colors.$white;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    &:hover {
+      color: colors.$aloha;
+    }
+  }
+}
+
+// Targeting the element for the viewport less than 600px
+@media screen and (max-width: 600px) {
+  // Hiding the nav links with height and overflow
+  .link-wrapper {
+    flex-direction: column;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+    background-color: colors.$snap-shot;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  }
+  //   Puts the logo image at the left end and hamburger at the right end of the header
+  .nav {
+    &__links {
+      padding: 10px;
+    }
+    //   Makes the hamburger icon visible
+    .hamburger-icon {
+      display: flex;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      color: colors.$white;
+      font-size: 2em;
+      // padding: 0px;
+      .fa-xmark {
+        display: none;
+      }
+    }
+    &:has(.hamburger-icon input[type="checkbox"]:checked) .link-wrapper {
+      height: auto;
+    }
+    &:has(.hamburger-icon input[type="checkbox"]:checked) label .fa-bars {
+      display: none;
+    }
+    &:has(.hamburger-icon input[type="checkbox"]:checked) label .fa-xmark {
+      display: inline;
+    }
+  }
+}
+
+.header {
+  text-align: right;
+  padding: 20px;
+  &__name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 5em;
+    color: colors.$carbon;
+    .fa-code {
+      padding: 30px;
+      color: colors.$aloha;
+    }
+  }
+  &__description {
+    font-family: "Montserrat", sans-serif;
+    font-size: 2.5em;
+    font-weight: 300;
+    color: colors.$mandarin-red;
+  }
+}
