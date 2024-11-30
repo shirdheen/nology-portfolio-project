@@ -4,7 +4,190 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shirdheen's Portfolio</title>
-    <link rel="stylesheet" href=".style.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/89994faf41.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <nav class="nav">
+      <div class="responsive-nav">
+        <img src="./images/logo-3.png" />
+        <!-- Hamburger icon -->
+        <div class="hamburger-icon">
+          <input type="checkbox" id="dropdown" />
+          <label for="dropdown">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+          </label>
+        </div>
+      </div>
+      <div class="link-wrapper">
+        <a href="#about" class="nav__links">About</a>
+        <a href="#skills" class="nav__links">Skills</a>
+        <a href="#projects" class="nav__links">Projects</a>
+        <a href="#contact" class="nav__links">Contact</a>
+      </div>
+    </nav>
+
+    <header class="header">
+      <h1 class="header__name">
+        <span><i class="fa-solid fa-code"></i></span>Shirdheen Murali
+      </h1>
+      <h2 class="header__description">
+        Aspiring full-stack developer | Biomedical engineer | Problem solver
+      </h2>
+    </header>
+
+    <main>
+      <section class="skills" id="skills">
+        <h1 class="skills__heading">I can code in_</h1>
+        <div class="skills__techstack">
+          <i class="fa-brands fa-html5 skills__icons--teal"></i>
+          <i class="fa-brands fa-css3-alt skills__icons--red"></i>
+          <i class="fa-brands fa-sass skills__icons--teal"></i>
+          <i class="fa-brands fa-js skills__icons--red"></i>
+        </div>
+      </section>
+
+      <section class="projects" id="projects">
+        <h1 class="projects__heading--large">My projects</h1>
+        <div class="projects__container">
+          <article class="projects__card">
+            <h3 class="projects__heading--small">Café website</h3>
+            <img src="./images/cafe-project.png" />
+            <p class="projects__description">
+              The café website homepage is designed to showcase the café's
+              ambiance, menu highlights, and special offerings.
+            </p>
+            <div class="icons-wrapper">
+              <a href="#">
+                <i class="fa fa-globe projects__icons--teal"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-github projects__icons--red"></i>
+              </a>
+            </div>
+          </article>
+          <article class="projects__card">
+            <h3 class="projects__heading--small">Project name</h3>
+            <img src="./images/placeholder.svg" />
+            <p class="projects__description">Project description</p>
+            <div class="icons-wrapper">
+              <a href="#">
+                <i class="fa fa-globe projects__icons--teal"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-github projects__icons--red"></i>
+              </a>
+            </div>
+          </article>
+          <article class="projects__card">
+            <h3 class="projects__heading--small">Project name</h3>
+            <img src="./images/placeholder.svg" />
+            <p class="projects__description">Project description</p>
+            <div class="icons-wrapper">
+              <a href="#">
+                <i class="fa fa-globe projects__icons--teal"></i>
+              </a>
+              <a href="#">
+                <i class="fa-brands fa-github projects__icons--red"></i>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <h1 class="about__heading--large">About me</h1>
+        <div class="about__container">
+          <img src="./images/Shirdheen Murali (1).jpg" class="about__image" />
+          <div class="about-wrapper">
+            <article class="about__card">
+              <h3 class="about__heading--small">
+                <i class="fa-solid fa-graduation-cap about__icons--teal"></i>
+                Master of Biomedical Engineering | Bachelor of Biomedicine
+              </h3>
+              <p class="about__description">From the University of Melbourne</p>
+            </article>
+            <article class="about__card">
+              <h3 class="about__heading--small">
+                <i class="fa-solid fa-dna about__icons--red"></i> Biomedical
+                engineer
+              </h3>
+              <p class="about__description">
+                I aspire to bridge the gap between technology and healthcare
+              </p>
+            </article>
+            <article class="about__card">
+              <h3 class="about__heading--small">
+                <i class="fa-solid fa-briefcase about__icons--teal"></i>
+                Academic tutor | Startup co-founder
+              </h3>
+              <p class="about__description">
+                5 years of experience as an academic tutor
+              </p>
+              <p class="about__description">
+                Co-founder of ELLIS Medical Solutions, a medical devices
+                start-up specialising respiratory monitoring solutions for
+                intensive care patients
+              </p>
+            </article>
+            <article class="about__card">
+              <h3 class="about__heading--small">
+                <i class="fa-solid fa-bullseye about__icons--red"></i> Problem
+                solver
+              </h3>
+              <p class="about__description">
+                I enjoy tackling challenges with creativity and efficiency
+              </p>
+            </article>
+            <article class="about__card">
+              <h3 class="about__heading--small">
+                <i class="fa-solid fa-rocket about__icons--teal"></i> Passion
+                for innovation
+              </h3>
+              <p class="about__description">
+                I love turning concepts into impactful, real-world solutions
+              </p>
+            </article>
+            <article class="about__card">
+              <h3 class="about__heading--small">
+                <i class="fa-solid fa-face-smile about__icons--red"></i> Hobbies
+              </h3>
+              <p class="about__description">
+                I enjoy baking, reading, and making Lego!
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" id="contact">
+        <h1 class="contact__heading--large">Get in touch_</h1>
+        <div class="contact__container">
+          <h3 class="contact__heading--small">
+            <i class="fa-solid fa-envelope contact__icons--teal"></i>
+            shirdheen2252@gmail.com
+          </h3>
+          <h3 class="contact__heading--small">
+            <i class="fa-brands fa-linkedin contact__icons--red"></i>
+            <a href="https://www.linkedin.com/in/shirdheen-roshini-7b25881aa/"
+              >Shirdheen Murali</a
+            >
+          </h3>
+          <h3 class="contact__heading--small">
+            <i class="fa-brands fa-github contact__icons--teal"></i> shirdheen
+          </h3>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
