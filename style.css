@@ -214,7 +214,7 @@
 }
 .about__heading--small {
   font-family: "Montserrat", sans-serif;
-  color: #2c3e50;
+  color: #ffffff;
   font-weight: bold;
   margin: 0;
   font-size: 1.5em;
@@ -226,21 +226,22 @@
   flex-direction: row;
   justify-content: space-between;
   padding: 50px;
+  align-items: center;
 }
 .about__image {
   width: 50%;
+  height: 30%;
   border-radius: 100px;
   margin-right: 50px;
 }
 .about__card {
   width: 100%;
-  background-color: #ffffff;
   border-radius: 20px;
   padding: 10px;
 }
 .about__description {
   font-family: "Montserrat", sans-serif;
-  color: #333333;
+  color: #ffffff;
   font-weight: 300;
   margin: 5;
   font-style: italic;
@@ -261,6 +262,24 @@
   padding: 10px;
 }
 
+@media screen and (max-width: 600px) {
+  .about__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
+  }
+  .about__image {
+    margin: 0;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+  .about__card {
+    width: 80%;
+  }
+}
 .contact {
   padding: 20px;
 }

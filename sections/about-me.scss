@@ -9,7 +9,7 @@
       padding: 20px;
     }
     &--small {
-      @include mixins.font(colors.$snap-shot, bold, 0);
+      @include mixins.font(colors.$white, bold, 0);
       font-size: 1.5em;
       margin: 0;
     }
@@ -19,20 +19,22 @@
     // height: 1000px;
     @include mixins.flexbox(row, space-between);
     padding: 50px;
+    align-items: center;
   }
   &__image {
     width: 50%;
+    height: 30%;
     border-radius: 100px;
     margin-right: 50px;
   }
   &__card {
     width: 100%;
-    background-color: colors.$white;
+    // background-color: colors.$white;
     border-radius: 20px;
     padding: 10px;
   }
   &__description {
-    @include mixins.font(colors.$carbon, 300, 5);
+    @include mixins.font(colors.$white, 300, 5);
     font-style: italic;
   }
   &__icons {
@@ -49,4 +51,25 @@
   align-items: center;
   gap: 20px;
   padding: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .about {
+    &__container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      padding: 10px;
+    }
+    &__image {
+      margin: 0;
+      margin-bottom: 20px;
+      margin-top: 20px;
+    }
+    &__card {
+      width: 80%;
+    }
+  }
 }
