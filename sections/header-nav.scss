@@ -1,4 +1,5 @@
 @use "../partials/colors";
+@use "../partials/media-queries" as q;
 
 .nav {
   background-color: colors.$snap-shot;
@@ -58,7 +59,7 @@
 }
 
 // Targeting the element for the viewport less than 600px
-@media screen and (max-width: 600px) {
+@include q.small-screen {
   // Hiding the nav links with height and overflow
   .link-wrapper {
     flex-direction: column;

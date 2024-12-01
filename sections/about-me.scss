@@ -1,5 +1,6 @@
 @use "../partials/colors";
 @use "../partials/mixins";
+@use "../partials/media-queries" as q;
 
 .about {
   &__heading {
@@ -29,13 +30,13 @@
   }
   &__card {
     width: 100%;
-    // background-color: colors.$white;
     border-radius: 20px;
     padding: 10px;
   }
   &__description {
     @include mixins.font(colors.$white, 300, 5);
     font-style: italic;
+    font-size: 1.25em;
   }
   &__icons {
     &--teal {
@@ -53,13 +54,11 @@
   padding: 10px;
 }
 
-@media screen and (max-width: 600px) {
+@include q.small-screen {
   .about {
     &__container {
-      display: flex;
-      justify-content: center;
+      @include mixins.flexbox(column, center);
       align-items: center;
-      flex-direction: column;
       width: 100%;
       padding: 10px;
     }
