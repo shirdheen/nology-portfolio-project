@@ -46,7 +46,7 @@
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
   transition: color 0.3s ease;
 }
 .nav__links:hover {
