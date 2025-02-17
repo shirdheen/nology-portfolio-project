@@ -33,13 +33,14 @@
   }
   img {
     width: 80%;
-    height: 60%;
-    object-fit: cover;
+    height: auto;
+    object-fit: contain;
     border: solid 1px colors.$carbon;
     border-radius: 20px;
   }
   &__description {
     font-family: "Montserrat", sans-serif;
+    font-style: italic;
     text-align: center;
     color: colors.$carbon;
   }

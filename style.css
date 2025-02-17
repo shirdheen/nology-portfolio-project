@@ -176,13 +176,14 @@
 }
 .projects img {
   width: 80%;
-  height: 60%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   border: solid 1px #333333;
   border-radius: 20px;
 }
 .projects__description {
   font-family: "Montserrat", sans-serif;
+  font-style: italic;
   text-align: center;
   color: #333333;
 }
