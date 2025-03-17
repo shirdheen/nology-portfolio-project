@@ -126,16 +126,51 @@
 .skills__techstack {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
+  gap: 40px;
+}
+.skills__icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.skills__icon p {
+  font-family: "Montserrat", sans-serif;
+  color: #ffffff;
+  font-weight: 400;
+  margin: 0;
+}
+.skills__img {
+  height: 120px;
+  width: 120px;
+  padding: 10px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.skills__img:hover {
+  transform: scale(1.1);
+}
+.skills__icons {
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .skills__icons--teal {
   color: #18bc9c;
   font-size: 9em;
 }
+.skills__icons--teal:hover {
+  transform: scale(1.1);
+  color: rgb(18.2264150943, 142.7735849057, 118.4716981132);
+}
 .skills__icons--red {
   color: #e74c3c;
   font-size: 9em;
+}
+.skills__icons--red:hover {
+  transform: scale(1.1);
+  color: rgb(213.698630137, 43.8356164384, 26.301369863);
 }
 
 .projects__heading--large {

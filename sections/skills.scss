@@ -10,17 +10,48 @@
     margin-bottom: 20px;
   }
   &__techstack {
-    @include mixins.flexbox(row, space-evenly);
+    @include mixins.flexbox(row, center);
     flex-wrap: wrap;
+    gap: 40px;
+  }
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    p {
+      @include mixins.font(colors.$white, 400, 0);
+    }
+  }
+  &__img {
+    height: 120px;
+    width: 120px;
+    padding: 10px;
+    object-fit: contain;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &__icons {
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     &--teal {
       color: colors.$aloha;
       font-size: 9em;
+      &:hover {
+        transform: scale(1.1);
+        color: darken(colors.$aloha, 10%);
+      }
     }
     &--red {
       color: colors.$mandarin-red;
       font-size: 9em;
+      &:hover {
+        transform: scale(1.1);
+        color: darken(colors.$mandarin-red, 10%);
+      }
     }
   }
 }
